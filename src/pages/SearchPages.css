@@ -1,0 +1,84 @@
+/* Search Page */
+.search-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Top bar for search page */
+.search-top-bar {
+  display: flex;
+  align-items: center;
+  background: #2e7d32;
+  color: white;
+  padding: 12px 16px;
+}
+
+.search-top-bar h2 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 12px;
+  border: 1px solid #ddd;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.search-icon {
+  margin-right: 8px;
+  color: #888;
+}
+
+/* Search Results */
+.search-results {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.search-item-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.search-item-card img {
+  width: 120px;      /* smaller fixed width */
+  height: 120px;     /* same height for square shape */
+  object-fit: cover; /* keeps image proportional while filling square */
+  border-radius: 8px;
+  margin: auto;      /* centers the image inside the card */
+  display: block;
+}
+
+
+.search-item-card span {
+  display: block;
+  padding: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  margin-top: 20px;
+}
