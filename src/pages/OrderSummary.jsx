@@ -5,11 +5,12 @@ export default function OrderSummary() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 flex items-center justify-center p-8 font-sans">
-      <div className="max-w-5xl w-full bg-white rounded-2xl shadow-xl border border-blue-300 flex flex-col md:flex-row overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center p-8 font-sans" style={{ backgroundColor: "#fef7f4" }}>
+      <div className="max-w-5xl w-full bg-white rounded-2xl shadow-xl border border-pink-300 flex flex-col md:flex-row overflow-hidden">
+        
         {/* Left: Order details */}
-        <section className="md:w-2/3 p-10 text-blue-900">
-          <h1 className="text-4xl font-extrabold mb-8 border-b border-blue-300 pb-4">
+        <section className="md:w-2/3 p-10 text-pink-900">
+          <h1 className="text-4xl font-extrabold mb-8 border-b border-pink-300 pb-4">
             🛒 Order Summary
           </h1>
           <ul className="space-y-6">
@@ -20,7 +21,7 @@ export default function OrderSummary() {
             ].map(({ name, price }, idx) => (
               <li
                 key={idx}
-                className="flex justify-between items-center text-lg font-medium border-b border-blue-200 pb-3"
+                className="flex justify-between items-center text-lg font-medium border-b border-pink-200 pb-3"
               >
                 <span>{name}</span>
                 <span>₹{price}</span>
@@ -28,19 +29,19 @@ export default function OrderSummary() {
             ))}
           </ul>
 
-          <div className="mt-8 border-t border-blue-300 pt-6 text-lg font-semibold flex justify-between text-blue-800">
+          <div className="mt-8 border-t border-pink-300 pt-6 text-lg font-semibold flex justify-between text-pink-800">
             <span>🚚 Delivery Charge</span>
             <span>₹40</span>
           </div>
 
-          <div className="mt-6 flex justify-between text-2xl font-extrabold text-blue-900">
+          <div className="mt-6 flex justify-between text-2xl font-extrabold text-pink-900">
             <span>Total Pay</span>
             <span>₹370</span>
           </div>
         </section>
 
         {/* Right: Delivery Location with route */}
-        <aside className="md:w-1/3 bg-blue-50 flex flex-col justify-between p-8 border-l border-blue-300">
+        <aside className="md:w-1/3 bg-pink-50 flex flex-col justify-between p-8 border-l border-pink-300">
           <div className="flex flex-col items-center space-y-6">
             {/* Route + Pin + POTTI KADAI box */}
             <svg
@@ -55,19 +56,19 @@ export default function OrderSummary() {
               {/* Route path */}
               <path
                 d="M30 30 H130 V70 H30 V110 H130"
-                stroke="#1E40AF"
+                stroke="#f472b6"
                 strokeWidth="6"
                 strokeLinecap="round"
                 strokeDasharray="15 10"
               />
-              {/* Pin icon (larger, blue with white center) */}
+              {/* Pin icon */}
               <g transform="translate(130 110) scale(1.6)">
                 <ellipse
                   cx="0"
                   cy="12"
                   rx="9"
                   ry="4"
-                  stroke="#1E40AF"
+                  stroke="#f472b6"
                   strokeWidth="2.5"
                   fill="white"
                 />
@@ -76,15 +77,15 @@ export default function OrderSummary() {
                      C-9 -14, -9 0, 0 14
                      C9 0, 9 -14, 0 -14
                      Z"
-                  stroke="#1E40AF"
+                  stroke="#f472b6"
                   strokeWidth="2.5"
-                  fill="#3B82F6"
+                  fill="#f472b6"
                 />
                 <circle
                   cx="0"
                   cy="-5"
                   r="6"
-                  stroke="#1E40AF"
+                  stroke="#f472b6"
                   strokeWidth="2.5"
                   fill="white"
                 />
@@ -96,8 +97,8 @@ export default function OrderSummary() {
                 width="60"
                 height="40"
                 rx="6"
-                fill="#1E40AF"
-                stroke="#2563EB"
+                fill="#2dd4bf"
+                stroke="#14b8a6"
                 strokeWidth="2"
               />
               <text
@@ -115,15 +116,15 @@ export default function OrderSummary() {
               </text>
             </svg>
 
-            <p className="text-blue-800 font-semibold text-base">
-              DELIVERY ON YOUR DOOR 
+            <p className="text-pink-800 font-semibold text-base">
+              DELIVERY ON YOUR DOOR
             </p>
           </div>
 
           {/* Track Order Button */}
           <button
             onClick={() => navigate("/track")}
-            className="mt-8 w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 rounded-lg shadow-lg transition transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400"
+            className="mt-8 w-full bg-pink-400 hover:bg-pink-500 text-white font-bold py-4 rounded-lg shadow-lg transition transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-200"
           >
             🚚 Track Order
           </button>
