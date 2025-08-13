@@ -30,7 +30,7 @@ export default function HomePage() {
       <div className="top-bar">
         <button 
           className="icon-btn" 
-          onClick={() => navigate("/search")}  // navigate to search page
+          onClick={() => navigate("/search")}
         >
           <FaSearch />
         </button>
@@ -50,13 +50,17 @@ export default function HomePage() {
         ))}
       </div>
 
-      {/* Items */}
+      {/* Items as Buttons */}
       <div className="items">
         {items.map((item, index) => (
-          <div key={index} className="item-card">
+          <button 
+            key={index} 
+            className="item-card-btn" 
+            onClick={() => alert(`You selected ${item.name}`)}
+          >
             <img src={item.img} alt={item.name} />
             <h2>{item.name}</h2>
-          </div>
+          </button>
         ))}
       </div>
 

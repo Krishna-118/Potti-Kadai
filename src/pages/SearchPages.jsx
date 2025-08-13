@@ -47,10 +47,14 @@ export default function SearchPage() {
       <div className="search-results">
         {filteredItems.length > 0 ? (
           filteredItems.map((item, index) => (
-            <div key={index} className="search-item-card">
+            <button
+              key={index}
+              className="search-item-btn"
+              onClick={() => alert(`You selected ${item.name}`)}
+            >
               <img src={item.img} alt={item.name} />
               <span>{item.name}</span>
-            </div>
+            </button>
           ))
         ) : (
           <p className="no-results">No items found</p>
